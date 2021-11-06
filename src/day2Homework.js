@@ -74,7 +74,32 @@ function checkPrimeNumbers(limit) {
     }
     return primeNumbers;
 }
-console.log('1 ve 1000 arasındaki asal sayılar : '+checkPrimeNumbers(1000))
+console.log('50 ye kadarki asal sayılar : '+checkPrimeNumbers(50))
+
+
+function checkCompoundNumbers(limit) {
+  let primeNumbers=[]
+  let compoundNumbers=[]
+
+  let primesAndCompounds=[]
+
+ primeNumbers=checkPrimeNumbers(limit)
+  console.log('Limite kadar olan asal sayılar = '+primeNumbers)
+
+  for (let i = 0; i < primeNumbers.length-1; i++) {
+    if ((primeNumbers[i]*primeNumbers[i+1])<=limit) {
+    compoundNumbers.push(primeNumbers[i]*primeNumbers[i+1])
+    }else{
+      break;
+    }
+  }
+
+  primesAndCompounds.push(Array.from(primeNumbers))
+  primesAndCompounds.push(Array.from(compoundNumbers))
+  return primesAndCompounds
+}
+
+console.log('100 sayısına kadar olan bileşik sayılar = '+checkCompoundNumbers(100))
 
 
 
