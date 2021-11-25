@@ -1,4 +1,4 @@
-export default class User{
+export default class UserAddModel{
     constructor(id,firstName,lastName,city,age){ // yapıcı blok, user newlendiğinde çalışır.
         this.id=id
         this.firstName=firstName
