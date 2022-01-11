@@ -1,4 +1,6 @@
 
 {
-    "editor.fontSize": 17
+    "editor.fontSize": 14,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs":"active"
 }
